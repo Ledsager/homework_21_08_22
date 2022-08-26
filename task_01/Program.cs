@@ -16,21 +16,19 @@ DayWeek(numberday);
 */
 
 int NumberDay;
-int num;
 //Цикл с постусловием
 do
 {
     //Приглашение пользователю
     Console.Write("Введите номер дня недели (1-7):");
      /*
-    * Получение веденной с клавиатуры строки,
-    * введенная строка сохраняется в переменную NumberDay
+    * Получение введенного с клавиатуры значения,
+    * введенное значение сохраняется в переменную NumberDay
     */
-    while(!int.TryParse(Console.ReadLine(), out NumberDay))
+    while(!int.TryParse(Console.ReadLine(), out NumberDay))//проверка что вводится число
     Console.Write("Неверный ввод! \nВведите номер дня недели (1-7): ");
-     //Вывод введенной строки
-    num = Convert.ToInt32(NumberDay);
-} while (((int)num > 7) || ((int)num < 1));
+    //num = Convert.ToInt32(NumberDay);
+} while (((int)NumberDay > 7) || ((int)NumberDay < 1));
 DayWeek(NumberDay);
 
 
