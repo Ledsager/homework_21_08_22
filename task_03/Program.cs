@@ -29,7 +29,7 @@ do
     * введенное значение сохраняется в переменную PartNumber
     */
     while(!int.TryParse(Console.ReadLine(), out PartNumber))//проверка что вводится число
-    Console.Write("Неверный ввод! \nВведите номер дня недели (1-7): ");
+    Console.Write("Неверный ввод! \nВведите номер четверти (1-4): ");
     //num = Convert.ToInt32(NumberDay);
 } while ((PartNumber > 4) || (PartNumber < 1));
 SectionPosition(PartNumber);
