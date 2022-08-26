@@ -18,6 +18,18 @@ if (numbersection == 2)
     Console.WriteLine("Для второй четверти диапазон (x < 0) и (y > 0)");
 }
 }
-Console.WriteLine("Введите номер четверти");
-int x = int.Parse(Console.ReadLine());
-SectionPosition(x);
+int PartNumber;
+//Цикл с постусловием
+do
+{
+    //Приглашение пользователю
+    Console.Write("Введите номер четверти (1-4):");
+     /*
+    * Получение введенного с клавиатуры значения,
+    * введенное значение сохраняется в переменную PartNumber
+    */
+    while(!int.TryParse(Console.ReadLine(), out PartNumber))//проверка что вводится число
+    Console.Write("Неверный ввод! \nВведите номер дня недели (1-7): ");
+    //num = Convert.ToInt32(NumberDay);
+} while ((PartNumber > 4) || (PartNumber < 1));
+SectionPosition(PartNumber);
